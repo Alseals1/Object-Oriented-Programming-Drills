@@ -61,7 +61,7 @@ class Vehicle {
 
     }
     aboutVehicle() {
-        console.log(`My vehicle is a ${this.manuf}and had ${this.wheel}`)
+        console.log(`My vehicle is a ${this.manuf} and had ${this.wheel} wheels!`)
     }
 }
 
@@ -73,7 +73,9 @@ class Truck extends Vehicle {
         this.hasBed = hasBed;
 
     }
-}
+    aboutVehicle() {
+        console.log(`My vehicle is a ${this.numberOfDoors} door ${this.manuf} truck and ha ${this.wheel} wheels! Did my truck bed come in the mail? ${this.hasBed}`)
+    }}
 
 class Sudan extends Vehicle {
     constructor(wheel, manuf, size, GasMile) {
@@ -89,5 +91,15 @@ class Motorcycle extends Vehicle{
         this.hasHandleBars = hasHandleBars
         this.hasDoor = hasDoor
     }
+    aboutVehicle() {
+       console.log (`My vehicle is a Motorcycle and has ${this.wheel}, but does it has doors? ${this.hasDoor}`)
+    }
 }
+let chrisTruck = new Truck(4, "Chevy", 2, true )
+chrisTruck.aboutVehicle()
 
+let joshSudan = new Sudan(4, "Toyota", "large", 30.4)
+joshSudan.aboutVehicle()
+
+let alandisMotor = new Motorcycle(2, "BMW", true, false)
+alandisMotor.aboutVehicle()
